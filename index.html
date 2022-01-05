@@ -7,6 +7,9 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | NFT preview card component</title>
 
@@ -142,40 +145,53 @@
       border-spacing: 0;
     }
 
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
     body {
       background-color: hsl(217, 54%, 11%);
       font-size: 18px;
-      font-family: outfit;
+      font-family: 'Outfit', sans-serif;
     }
     .card {
       margin: auto;
       margin-top: 25vh;
       border-radius: 4%;
-      width: 18rem;
+      width: 20rem;
       height: auto;
       background-color: hsl(216, 50%, 16%);
     }
 
     .wrapper {
       padding: 1.5rem;
+      padding-bottom: 2rem;
     }
 
     .nft {
+      position: relative;
     }
 
-    .nft img {
+    .nft:hover .nft-img{
+      opacity: 60%;
+    }
+
+    .nft:hover .img-eye {
+      display: inline-block;
+    }
+
+
+    .nft-img {
       max-height:100%; 
       max-width:100%;
       border-radius: 4%;
+    }
+
+    .img-eye{
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 15%;
+      display: none;
     }
 
     .text {
@@ -189,17 +205,26 @@
     }
 
     .text p {
-      color: hsl(215, 51%, 70%);
-      font-weight: 400;
-      font-size: 13px;
+      color: hsl(215, 20%, 60%);
+      font-weight: 600;
+      font-size: 15px;
       line-height: 1.4;
       padding-bottom: 1rem;
+    }
+
+    .text a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .text a:hover {
+      color: hsl(178, 100%, 50%);
     }
 
     .eth {
       position: relative;
       color: hsl(178, 100%, 50%);
-      font-weight: 400;
+      font-weight: 600;
       font-size: 0.9rem;
       height: 1rem;
       line-height: 1.2rem;
@@ -224,7 +249,7 @@
       border-bottom: 1px solid hsl(215, 51%, 70%);
     }
     .credits-img {
-      width: 15%;
+      width: 10%;
       border: 1px solid white;
       border-radius: 50%;
       float: left;
@@ -232,9 +257,33 @@
     }
 
     .credits p {
-      color: hsl(215, 51%, 70%);
+      color: hsl(215, 20%, 60%);
       padding-top: 0.5rem;
       font-size: 13px;
+      font-weight: 600;
+    }
+   
+    .credits a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .credits a:hover {
+      color: hsl(178, 100%, 50%);
+    }
+
+    span {
+      position: absolute;
+      border-radius: 5%;
+      width: 272px;
+      height: 272px;
+      background: hsl(178, 100%, 50%);;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: hsl(215, 20%, 30%);
     }
   </style>
 </head>
@@ -242,11 +291,14 @@
 <body>
   <div class="card">
     <div class="wrapper">
-      <div class="nft">
-        <img src=".\images\image-equilibrium.jpg">
-      </div>
+      <a href="#">
+        <span></span>
+          <div class="nft">
+            <img class="nft-img" src=".\images\image-equilibrium.jpg"><img class="img-eye" src=".\images\icon-view.svg">
+        </div>
+      </a>
       <div class="text">
-        <h1>Equilibrium #3429</h1>
+        <h1><a href="#">Equilibrium #3429</a></h1>
         <p>Our Equilibrium collection promotes balance and calm.</p>
       </div>
       <div class="eth">
@@ -254,19 +306,11 @@
         <p><img class="clock-img"src=".\images\icon-clock.svg">3 days left</p>
       </div>
       <hr>
-
       <div class="credits">
         <img class="credits-img"src=".\images\image-avatar.png">
-        <p>Creation of <em style="color:hsl(0, 0%, 100%)">Invictus</em></p>
+        <p>Creation of <em style="color:hsl(0, 0%, 100%)"><a href="#">Jules Wyvern</a></em></p>
       </div>
     </div>
-  </div>
-
-
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Invictus</a>.
   </div>
 </body>
 
