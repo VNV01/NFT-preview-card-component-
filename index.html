@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: hsl(217, 54%, 11%);
+      font-size: 18px;
+      font-family: outfit;
+    }
+    .card {
+      margin: auto;
+      margin-top: 25vh;
+      border-radius: 4%;
+      width: 18rem;
+      height: auto;
+      background-color: hsl(216, 50%, 16%);
+    }
+
+    .wrapper {
+      padding: 1.5rem;
+    }
+
+    .nft {
+    }
+
+    .nft img {
+      max-height:100%; 
+      max-width:100%;
+      border-radius: 4%;
+    }
+
+    .text {
+      padding-top: 1rem;
+    }
+
+    .text h1 {
+      color: hsl(0, 0%, 100%);
+      font-weight: 600;
+      padding-bottom: 1rem;
+    }
+
+    .text p {
+      color: hsl(215, 51%, 70%);
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 1.4;
+      padding-bottom: 1rem;
+    }
+
+    .eth {
+      position: relative;
+      color: hsl(178, 100%, 50%);
+      font-weight: 400;
+      font-size: 0.9rem;
+      height: 1rem;
+      line-height: 1.2rem;
+    }
+    .eth-img {
+      float: left;
+      margin-right: 0.5rem;
+    }
+
+    .eth p {
+      float: right;
+      color: hsl(215, 51%, 70%);
+    }
+
+    .clock-img {
+      float: left;
+      margin-right: 0.2rem;
+    }
+
+    hr {
+      margin-top: 1rem;
+      border-bottom: 1px solid hsl(215, 51%, 70%);
+    }
+    .credits-img {
+      width: 15%;
+      border: 1px solid white;
+      border-radius: 50%;
+      float: left;
+      margin-right: 0.5rem;
+    }
+
+    .credits p {
+      color: hsl(215, 51%, 70%);
+      padding-top: 0.5rem;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="wrapper">
+      <div class="nft">
+        <img src=".\images\image-equilibrium.jpg">
+      </div>
+      <div class="text">
+        <h1>Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+      </div>
+      <div class="eth">
+        <img class="eth-img"src=".\images\icon-ethereum.svg">0.041ETH
+        <p><img class="clock-img"src=".\images\icon-clock.svg">3 days left</p>
+      </div>
+      <hr>
+
+      <div class="credits">
+        <img class="credits-img"src=".\images\image-avatar.png">
+        <p>Creation of <em style="color:hsl(0, 0%, 100%)">Invictus</em></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Invictus</a>.
+  </div>
+</body>
+
+</html>
